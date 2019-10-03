@@ -9,7 +9,7 @@ export class Message extends React.Component {
           <li>
           Two display modes:
             <ul>
-              <li>Hexbin(default): Shots near a certain spot are aggregated into one hexagon</li>
+              <li>Hexbin(default): shots near a certain spot are aggregated into one hexagon</li>
               <li>Scatter: accurate spots of each shot</li>
             </ul>
           </li>
