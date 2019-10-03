@@ -5,7 +5,7 @@ This project renders a shotchart to visualize official NBA stats for all players
 ## Quick View
 
 
-Try it here!
+Try it! [Go to website](http://nba-stats-visualizer.appspot.com)
 
 
 
