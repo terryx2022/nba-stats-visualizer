@@ -1,0 +1,32 @@
+.App-logo {
+    height: 35px;
+    padding-left: 40px;
+    float: left;
+  }
+  
+  .App-header {
+    /* color: white; */
+    background-color: #1D428A;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-bottom: 70px;  
+    box-shadow: -1px 0 5px 0 #1D428A
+  }
+
+
+
+  
+  /* .App-link {
+    color: #61dafb;
+  } */
+  
+  /* @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+   */
