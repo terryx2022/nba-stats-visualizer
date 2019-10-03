@@ -14,12 +14,10 @@ export class ShotChart extends React.Component {
  }
 
   componentDidMount() {
-    console.log('ShotChart.js - Chart Mounted')
     this.loadChartInfo();
   }
 
   componentDidUpdate() {
-    console.log('ShotChart.js - Chart Updated')
     this.loadChartInfo();
   }
 
@@ -49,7 +47,6 @@ export class ShotChart extends React.Component {
   }
 
  render() {
-   console.log('ShotChart.js - Rendering chart...')
    return (
        <div id="shot-chart"></div>
    );

@@ -13,42 +13,36 @@ export class Main extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Main.js - Main page Mounted')
     this.loadPlayerInfo(this.state.playerInfo.playerId)
   }
 
   componentDidUpdate() {
-    console.log('Main.js - Main page Updated')
     // this.loadPlayerInfo(this.state.playerInfo.playerId)
   }
 
   loadPlayerInfo = (playerId) => {
-    console.log('Main.js - Start loading chart')
-    this.setState({
-    }) 
     nba.stats.playerInfo({ PlayerID: playerId })
     .then((info) => {
       const playerInfo = Object.assign({}, 
         info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
-      console.log('Main.js - Finish loading chart')
       this.setState({ playerInfo });
-      this.setState({ playerInfo });
+      console.log(info)
     })
     .catch((e) => {
       console.log(e);
-      console.log("Main.js - Error occurred.(Finish loading)")
     });
   }
 
   render() {
-    console.log("Main.js - Rendering main page...")
     return (
       <div className="main">
         <Message />
-        <SearchBar changePlayer={_.debounce(this.loadPlayerInfo, 200)}/>
-        <div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-          <Profile playerInfo={this.state.playerInfo}/>
-          <DataViewContainer playerId={this.state.playerInfo.playerId} />
+        <div className="main-content-container">
+          <SearchBar changePlayer={_.debounce(this.loadPlayerInfo, 200)}/>
+          <div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+            <Profile playerInfo={this.state.playerInfo}/>
+            <DataViewContainer playerId={this.state.playerInfo.playerId} />
+          </div>
         </div>
       </div>
     );
