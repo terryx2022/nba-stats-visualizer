@@ -1,4 +1,5 @@
 .main {
+    display: flex;
     width: 750px;
     margin: auto;
     background: rgb(243, 244, 245);
@@ -14,6 +15,7 @@
     overflow: hidden;
    }
 
+   /* Not being used */
 .loading {
     width: 100%;
     height: 100%;

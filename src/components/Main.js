@@ -1,9 +1,10 @@
 import React from 'react';
 import { DataViewContainer } from './DataViewContainer';
 import { Profile } from './Profile';
-import { SearchBar} from './SearchBar'
+import { SearchBar} from './SearchBar';
+import { Message } from './Message';
+import { DEFAULT_PALYER_INFO } from './../constants';
 import nba from 'nba';
-import { DEFAULT_PALYER_INFO } from './../constants'
 import _ from 'lodash';
 
 export class Main extends React.Component {
@@ -43,11 +44,12 @@ export class Main extends React.Component {
     console.log("Main.js - Rendering main page...")
     return (
       <div className="main">
+        <Message />
         <SearchBar changePlayer={_.debounce(this.loadPlayerInfo, 200)}/>
-          <div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-            <Profile playerInfo={this.state.playerInfo}/>
-            <DataViewContainer playerId={this.state.playerInfo.playerId} />
-          </div>
+        <div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+          <Profile playerInfo={this.state.playerInfo}/>
+          <DataViewContainer playerId={this.state.playerInfo.playerId} />
+        </div>
       </div>
     );
   }
