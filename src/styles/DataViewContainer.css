@@ -1,12 +1,9 @@
 .data-view {
     width: 550px;
-    
-    /* padding-bottom: 30px; */
-}
-
+    background: rgb(255, 255, 255);
+  }
+  
 .filters {
-    width: 100%;
-    margin-left: 75px;
-    margin-top: 60px;
-    /* margin-bottom: 50px; */
+margin-left: 75px;
 }
+  

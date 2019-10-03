@@ -9,7 +9,6 @@ import _ from 'lodash';
 export class Main extends React.Component {
   state = {
     playerInfo: DEFAULT_PALYER_INFO,
-    isLoading: false
   }
 
   componentDidMount() {
@@ -25,20 +24,18 @@ export class Main extends React.Component {
   loadPlayerInfo = (playerId) => {
     console.log('Main.js - Start loading chart')
     this.setState({
-      isLoading: true
     }) 
     nba.stats.playerInfo({ PlayerID: playerId })
     .then((info) => {
       const playerInfo = Object.assign({}, 
         info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
       console.log('Main.js - Finish loading chart')
-      this.setState({ playerInfo, isLoading: false });
+      this.setState({ playerInfo });
       this.setState({ playerInfo });
     })
     .catch((e) => {
       console.log(e);
       console.log("Main.js - Error occurred.(Finish loading)")
-      this.setState({isLoading: false})
     });
   }
 
@@ -47,12 +44,10 @@ export class Main extends React.Component {
     return (
       <div className="main">
         <SearchBar changePlayer={_.debounce(this.loadPlayerInfo, 200)}/>
-        {this.state.isLoading ? 
-            <div className="loading">Loading...</div> : 
-            (<div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-              <Profile playerInfo={this.state.playerInfo}/>
-              <DataViewContainer playerId={this.state.playerInfo.playerId} />
-            </div>)}
+          <div className="player">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+            <Profile playerInfo={this.state.playerInfo}/>
+            <DataViewContainer playerId={this.state.playerInfo.playerId} />
+          </div>
       </div>
     );
   }

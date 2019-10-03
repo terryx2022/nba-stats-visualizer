@@ -1,22 +1,23 @@
 .main {
     width: 750px;
     margin: auto;
+    background: rgb(243, 244, 245);
 }
 
 .player {
     display: flex;
-    border: 3px solid #ccc;
+    width: 750px;
+    margin: auto;
+    border: 5px solid #032f4f;
+    box-shadow: 6px 10px 10px #888;
     border-radius: 10px;
-    box-shadow: 5px 10px 10px #888;
-
-    /* This is for Stephen Curry */
-    overflow: hidden; 
-}
+    overflow: hidden;
+   }
 
 .loading {
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin-top: 250px;
     font-size: 30px;
     /* background: red; */
 }

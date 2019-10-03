@@ -21,15 +21,16 @@ export class Profile extends React.Component {
          src={`${PROFILE_PIC_URL_PREFIX}/${playerId}.png`}
          alt="Profile"
        />
-       <div className="profile-entry">
-         <div className="profile-entry-left">Team</div>
-         <div className="profile-entry-right">{`${teamCity} ${teamName}`}</div>
-       </div>
-       <img
+      <img
          className="team-logo"
          src={`${TEAM_PIC_URL_PREFIX}/${teamAbbreviation}_logo.svg`}
          alt="Team"
        />
+       <div className="profile-entry">
+         <div className="profile-entry-left">Team</div>
+         <div className="profile-entry-right">{`${teamCity} ${teamName}`}</div>
+       </div>
+
        <div className="profile-entry">
          <div className="profile-entry-left">Height</div>
          <div className="profile-entry-right">{`${height}`}</div>
