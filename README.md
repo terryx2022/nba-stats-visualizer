@@ -1,7 +1,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # NBA Stats Visualizer
-This project renders a shotchart to visualize official NBA stats for all players currently in the league. All data are fetched from  _[nba.com]_(https://www.nba.com/) with APIs supported by _[npm-nba]_(https://www.npmjs.com/package/nba).
+This project renders a shotchart to visualize official NBA stats for all players currently in the league. All data are fetched from  [nba.com](https://www.nba.com/) with APIs supported by [npm-nba](https://www.npmjs.com/package/nba).
 ## Quick View
 
 
