@@ -7,6 +7,12 @@
   margin-bottom: 25px;
 }
 
+p {
+  margin-bottom: 0px;
+  margin-left: 40px;
+
+}
+
 li>ul {
   list-style-type: square;
 }

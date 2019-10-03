@@ -4,6 +4,9 @@ export class Message extends React.Component {
   render() {
     return (
       <div className="message">
+        <p>
+          Quick start:
+        </p>
         <ul>
           <li>Slide or enter a value to filter shot spots by frequency.</li>
           <li>
