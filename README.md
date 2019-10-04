@@ -6,7 +6,7 @@ supported by [npm-nba](https://www.npmjs.com/package/nba).
 Have a try! [Go to website](http://nba-stats-visualizer.appspot.com)
 
 ## Quick View
-
+![video](/nba-web-demo.mov)
 
 ## Install the dependencies to run locally
 
